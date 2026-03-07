@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - MEGO Store</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/global.css">
+  <link rel="stylesheet" href="assets/css/contact.css">
+  <link rel="stylesheet" href="assets/css/features.css">
+</head>
+<body>
+  <div id="navbar-placeholder"></div>
+
+  <section class="contact-hero">
+    <div class="container">
+      <div class="section-tag">Get in Touch</div>
+      <h1 style="font-family:var(--font-display);font-size:clamp(2rem,5vw,3.5rem);font-weight:900;color:white">Contact <span style="color:var(--primary)">Us</span></h1>
+      <p style="color:rgba(255,255,255,0.65);max-width:500px;margin:14px auto 0">Have a question or need help? Our team is here for you 24/7.</p>
+    </div>
+  </section>
+
+  <section class="contact-section">
+    <div class="container">
+      <div class="row g-4 mb-5">
+        <!-- Form -->
+        <div class="col-lg-7">
+          <div class="contact-card">
+            <h3 style="font-family:var(--font-display);font-size:1.5rem;margin-bottom:8px">Send us a <span style="color:var(--primary)">Message</span></h3>
+            <p style="font-size:0.875rem;margin-bottom:28px">Fill out the form and we'll get back to you within 24 hours.</p>
+            <form id="contactForm">
+              <div class="row g-3">
+                <div class="col-md-6"><div class="form-group-custom"><label class="form-label-custom">Your Name*</label><input class="form-control-custom" placeholder="John Doe" required></div></div>
+                <div class="col-md-6"><div class="form-group-custom"><label class="form-label-custom">Email Address*</label><input type="email" class="form-control-custom" placeholder="john@example.com" required></div></div>
+                <div class="col-md-6"><div class="form-group-custom"><label class="form-label-custom">Phone</label><input class="form-control-custom" placeholder="+1 234 567 8900"></div></div>
+                <div class="col-md-6"><div class="form-group-custom"><label class="form-label-custom">Subject*</label>
+                  <select class="form-control-custom" required><option value="">Select a topic</option><option>Order Issue</option><option>Return/Refund</option><option>Product Question</option><option>Shipping</option><option>Partnership</option><option>Other</option></select>
+                </div></div>
+                <div class="col-12"><div class="form-group-custom"><label class="form-label-custom">Message*</label><textarea class="form-control-custom" rows="5" placeholder="Tell us how we can help..." required></textarea></div></div>
+                <div class="col-12"><button type="submit" class="btn-primary-custom" id="submitBtn" style="padding:13px 32px"><i class="fas fa-paper-plane"></i> Send Message</button></div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-- Info -->
+        <div class="col-lg-5">
+          <div class="contact-info-card">
+            <h3 style="font-family:var(--font-display);font-size:1.4rem;margin-bottom:28px">Contact <span style="color:var(--primary)">Information</span></h3>
+            <div class="contact-info-item"><div class="contact-info-icon"><i class="fas fa-map-marker-alt"></i></div><div><div class="contact-info-label">Our Address</div><div class="contact-info-value">123 Fashion Street, Design District<br>New York, NY 10001</div></div></div>
+            <div class="contact-info-item"><div class="contact-info-icon"><i class="fas fa-envelope"></i></div><div><div class="contact-info-label">Email Us</div><div class="contact-info-value">hello@megostore.com<br>support@megostore.com</div></div></div>
+            <div class="contact-info-item"><div class="contact-info-icon"><i class="fas fa-phone-alt"></i></div><div><div class="contact-info-label">Call Us</div><div class="contact-info-value">+1 (800) MEGO-SHOP<br>Mon–Fri, 9am–6pm EST</div></div></div>
+            <div class="contact-info-item"><div class="contact-info-icon"><i class="fas fa-clock"></i></div><div><div class="contact-info-label">Working Hours</div><div class="contact-info-value">Monday – Friday: 9am – 6pm<br>Saturday: 10am – 4pm</div></div></div>
+            <div class="contact-social-links">
+              <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ -->
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="section-header text-center mb-4"><div class="section-tag">FAQ</div><h2 class="section-title">Frequently Asked <span>Questions</span></h2></div>
+          <div class="faq-item"><button class="faq-question">How long does shipping take? <span class="faq-icon">+</span></button><div class="faq-answer"><div class="faq-answer-inner">Standard shipping takes 5–7 business days. Express shipping (2–3 days) is available for $9.99. Free shipping on orders over $99.</div></div></div>
+          <div class="faq-item"><button class="faq-question">What is your return policy? <span class="faq-icon">+</span></button><div class="faq-answer"><div class="faq-answer-inner">We offer a 30-day hassle-free return policy. Items must be unworn, unwashed, and in original packaging with tags attached.</div></div></div>
+          <div class="faq-item"><button class="faq-question">Are your products authentic? <span class="faq-icon">+</span></button><div class="faq-answer"><div class="faq-answer-inner">Absolutely. We source directly from brands and authorized distributors. Every item comes with authenticity verification.</div></div></div>
+          <div class="faq-item"><button class="faq-question">How can I track my order? <span class="faq-icon">+</span></button><div class="faq-answer"><div class="faq-answer-inner">Once your order ships, you'll receive a tracking number via email. You can also track it in your account under "My Orders".</div></div></div>
+          <div class="faq-item"><button class="faq-question">Do you ship internationally? <span class="faq-icon">+</span></button><div class="faq-answer"><div class="faq-answer-inner">Yes! We ship to 80+ countries worldwide. International shipping rates and times vary by destination.</div></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+  <div class="toast-container-custom"></div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/global.js"></script>
+  <script src="assets/js/contact.js"></script>
+  <script>
+    document.getElementById('navbar-placeholder').innerHTML = renderNavbar('Contact');
+    document.getElementById('footer-placeholder').innerHTML = renderFooter();
+  </script>
+  <script src="assets/js/features.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+.about-hero { background: linear-gradient(135deg, var(--dark), var(--dark-2)); padding: 80px 0; text-align: center; color: white; }
+.about-hero-title { font-family: var(--font-display); font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 900; }
+.about-hero-title span { color: var(--primary); }
+.about-hero p { color: rgba(255,255,255,0.65); max-width: 560px; margin: 16px auto 0; font-size: 1rem; }
+.about-section { padding: 80px 0; }
+.about-img { border-radius: var(--radius-xl); overflow: hidden; }
+.about-img img { width: 100%; height: 500px; object-fit: cover; }
+.value-card { background: white; border-radius: var(--radius-lg); padding: 28px; border: 1px solid var(--border); text-align: center; height: 100%; transition: var(--transition); }
+[data-theme="dark"] .value-card { background: var(--dark-2); }
+.value-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); border-color: var(--primary); }
+.value-icon { width: 60px; height: 60px; background: linear-gradient(135deg, var(--primary), var(--primary-dark)); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.4rem; margin: 0 auto 16px; }
+.value-title { font-family: var(--font-display); font-size: 1rem; font-weight: 700; color: var(--text-dark); margin-bottom: 8px; }
+[data-theme="dark"] .value-title { color: var(--text-light); }
+.team-card { text-align: center; }
+.team-avatar { width: 110px; height: 110px; border-radius: 50%; object-fit: cover; border: 3px solid var(--primary); margin: 0 auto 14px; display: block; }
+.team-name { font-family: var(--font-display); font-size: 1rem; font-weight: 700; color: var(--text-dark); }
+[data-theme="dark"] .team-name { color: var(--text-light); }
+.team-role { font-size: 0.8rem; color: var(--primary); font-weight: 600; margin: 4px 0 10px; }
+.team-socials { display: flex; gap: 8px; justify-content: center; }
+.team-social { width: 32px; height: 32px; background: var(--light-2); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--text-muted); font-size: 0.8rem; transition: var(--transition-fast); }
+.team-social:hover { background: var(--primary); color: white; }
+.stats-section { background: linear-gradient(135deg, var(--secondary), var(--dark)); padding: 60px 0; }
+.stat-item { text-align: center; color: white; }
+.stat-number { font-family: var(--font-display); font-size: 2.5rem; font-weight: 900; color: var(--primary); }
+.stat-text { font-size: 0.875rem; color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 1px; margin-top: 6px; }
+
+/* ========== MOBILE RESPONSIVE FIX - ABOUT ========== */
+@media (max-width: 576px) {
+  .about-hero { padding: 50px 0; }
+  .about-section { padding: 40px 0; }
+  .about-img img { height: 280px; }
+  .value-card { padding: 20px; }
+  .stat-number { font-size: 1.8rem; }
+  .stats-section { padding: 40px 0; }
+  .team-avatar { width: 90px; height: 90px; }
+}

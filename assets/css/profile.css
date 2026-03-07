@@ -1,0 +1,42 @@
+.profile-section { padding: 50px 0; }
+.profile-sidebar { background: white; border-radius: var(--radius-lg); padding: 28px; border: 1px solid var(--border); text-align: center; position: sticky; top: 100px; }
+[data-theme="dark"] .profile-sidebar { background: var(--dark-2); }
+.profile-avatar-wrap { position: relative; width: 100px; height: 100px; margin: 0 auto 16px; }
+.profile-avatar { width: 100px; height: 100px; border-radius: 50%; object-fit: cover; border: 3px solid var(--primary); }
+.avatar-edit { position: absolute; bottom: 0; right: 0; width: 28px; height: 28px; background: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 0.7rem; cursor: pointer; border: 2px solid white; }
+.profile-name { font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; color: var(--text-dark); }
+[data-theme="dark"] .profile-name { color: var(--text-light); }
+.profile-email { font-size: 0.8rem; color: var(--text-muted); margin: 4px 0 20px; }
+.profile-nav { list-style: none; padding: 0; text-align: left; }
+.profile-nav li { margin-bottom: 4px; }
+.profile-nav-link { display: flex; align-items: center; gap: 10px; padding: 10px 14px; border-radius: var(--radius-sm); font-size: 0.875rem; font-weight: 500; color: var(--text-dark); transition: var(--transition-fast); cursor: pointer; border: none; background: none; width: 100%; }
+[data-theme="dark"] .profile-nav-link { color: var(--text-light); }
+.profile-nav-link:hover, .profile-nav-link.active { background: rgba(200,169,110,0.1); color: var(--primary); }
+.profile-nav-link i { width: 18px; color: var(--primary); font-size: 0.9rem; }
+.profile-card { background: white; border-radius: var(--radius-lg); padding: 28px; border: 1px solid var(--border); margin-bottom: 20px; }
+[data-theme="dark"] .profile-card { background: var(--dark-2); }
+.profile-card-title { font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; color: var(--text-dark); margin-bottom: 20px; padding-bottom: 14px; border-bottom: 1px solid var(--border); }
+[data-theme="dark"] .profile-card-title { color: var(--text-light); }
+.order-table-head { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr; gap: 12px; padding: 10px 0; border-bottom: 2px solid var(--border); font-size: 0.72rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--text-muted); }
+.order-row { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr; gap: 12px; align-items: center; padding: 14px 0; border-bottom: 1px solid var(--border); font-size: 0.875rem; }
+.order-row:last-child { border-bottom: none; }
+.order-id { font-weight: 700; color: var(--primary); }
+.order-status { padding: 3px 10px; border-radius: 50px; font-size: 0.72rem; font-weight: 700; display: inline-block; }
+.status-delivered { background: rgba(45,198,83,0.12); color: #2dc653; }
+.status-pending { background: rgba(244,162,97,0.12); color: #f4a261; }
+.status-processing { background: rgba(69,123,157,0.12); color: #457b9d; }
+.stat-card { background: var(--light-2); border-radius: var(--radius-md); padding: 20px; text-align: center; }
+[data-theme="dark"] .stat-card { background: var(--dark-3); }
+.stat-icon { font-size: 1.8rem; margin-bottom: 8px; }
+.stat-num { font-family: var(--font-display); font-size: 1.8rem; font-weight: 700; color: var(--primary); }
+.stat-label { font-size: 0.78rem; color: var(--text-muted); }
+.address-card { border: 1.5px solid var(--border); border-radius: var(--radius-md); padding: 18px; position: relative; transition: var(--transition-fast); }
+.address-card:hover { border-color: var(--primary); }
+.address-card.default { border-color: var(--primary); background: rgba(200,169,110,0.05); }
+.address-default-badge { position: absolute; top: -10px; left: 14px; background: var(--primary); color: white; font-size: 0.65rem; font-weight: 700; letter-spacing: 1px; padding: 3px 10px; border-radius: 50px; }
+@media (max-width: 768px) { .order-table-head { display: none; } .order-row { grid-template-columns: 1fr 1fr; } }
+
+/* ========== MOBILE RESPONSIVE FIX - PROFILE ========== */
+@media (max-width: 576px) {
+  .order-row { grid-template-columns: 1fr !important; }
+}

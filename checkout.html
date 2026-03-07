@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout - MEGO Store</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/global.css">
+  <link rel="stylesheet" href="assets/css/checkout.css">
+  <link rel="stylesheet" href="assets/css/features.css">
+</head>
+<body>
+  <div id="navbar-placeholder"></div>
+  <section class="checkout-section">
+    <div class="container">
+      <h2 class="section-title mb-4">Checkout</h2>
+
+      <div id="orderSuccess" style="display:none" class="text-center py-5">
+        <div style="font-size:5rem;margin-bottom:20px">🎉</div>
+        <h3 class="section-title">Order Placed <span>Successfully!</span></h3>
+        <p style="color:var(--text-muted);max-width:400px;margin:10px auto 30px">Thank you for your order! You'll receive a confirmation email shortly.</p>
+        <a href="index.html" class="btn-primary-custom"><i class="fas fa-home"></i> Back to Home</a>
+      </div>
+
+      <div id="checkoutForm">
+        <div class="row g-4">
+          <div class="col-lg-7">
+            <!-- Shipping -->
+            <div class="checkout-card">
+              <div class="checkout-card-title"><div class="step-num">1</div>Shipping Information</div>
+              <div class="form-row">
+                <div class="form-group-custom"><label class="form-label-custom">First Name*</label><input id="firstName" class="form-control-custom" placeholder="John"></div>
+                <div class="form-group-custom"><label class="form-label-custom">Last Name*</label><input id="lastName" class="form-control-custom" placeholder="Doe"></div>
+              </div>
+              <div class="form-row">
+                <div class="form-group-custom"><label class="form-label-custom">Email*</label><input id="email" type="email" class="form-control-custom" placeholder="john@example.com"></div>
+                <div class="form-group-custom"><label class="form-label-custom">Phone*</label><input id="phone" type="tel" class="form-control-custom" placeholder="+1 234 567 8900"></div>
+              </div>
+              <div class="form-group-custom"><label class="form-label-custom">Address*</label><input id="address" class="form-control-custom" placeholder="123 Main Street, Apt 4B"></div>
+              <div class="form-row">
+                <div class="form-group-custom"><label class="form-label-custom">City*</label><input id="city" class="form-control-custom" placeholder="New York"></div>
+                <div class="form-group-custom"><label class="form-label-custom">Country*</label>
+                  <select id="country" class="form-control-custom"><option value="">Select Country</option><option>United States</option><option>United Kingdom</option><option>Egypt</option><option>UAE</option><option>Saudi Arabia</option><option>Germany</option><option>France</option></select>
+                </div>
+              </div>
+            </div>
+            <!-- Payment -->
+            <div class="checkout-card">
+              <div class="checkout-card-title"><div class="step-num">2</div>Payment Method</div>
+              <div class="payment-method active" data-method="card"><input type="radio" name="paymentMethod" value="card" checked><span class="payment-method-label"><i class="fas fa-credit-card me-2"></i>Credit / Debit Card</span><span class="payment-method-icon"><i class="fab fa-cc-visa"></i></span></div>
+              <div id="cardFields" class="ms-3 mt-2 mb-3">
+                <div class="form-group-custom"><label class="form-label-custom">Card Number</label><input class="form-control-custom" placeholder="1234 5678 9012 3456"></div>
+                <div class="form-row">
+                  <div class="form-group-custom"><label class="form-label-custom">Expiry</label><input class="form-control-custom" placeholder="MM/YY"></div>
+                  <div class="form-group-custom"><label class="form-label-custom">CVV</label><input class="form-control-custom" placeholder="123" type="password"></div>
+                </div>
+              </div>
+              <div class="payment-method" data-method="paypal"><input type="radio" name="paymentMethod" value="paypal"><span class="payment-method-label"><i class="fab fa-paypal me-2"></i>PayPal</span><span class="payment-method-icon"><i class="fab fa-cc-paypal"></i></span></div>
+              <div class="payment-method" data-method="cod"><input type="radio" name="paymentMethod" value="cod"><span class="payment-method-label"><i class="fas fa-money-bill me-2"></i>Cash on Delivery</span></div>
+            </div>
+          </div>
+          <div class="col-lg-5">
+            <div class="checkout-card" style="position:sticky;top:100px">
+              <div class="checkout-card-title"><div class="step-num">3</div>Order Summary</div>
+              <div id="orderItems"></div>
+              <hr class="divider-gold">
+              <div style="display:flex;justify-content:space-between;margin-bottom:8px;font-size:0.875rem"><span style="color:var(--text-muted)">Subtotal</span><span id="coSubtotal" style="font-weight:600">$0.00</span></div>
+              <div style="display:flex;justify-content:space-between;margin-bottom:16px;font-size:0.875rem"><span style="color:var(--text-muted)">Shipping</span><span id="coShipping" style="font-weight:600">$0.00</span></div>
+              <div style="display:flex;justify-content:space-between;font-size:1.1rem;font-weight:700;color:var(--text-dark)"><span>Total</span><span id="coTotal" style="color:var(--primary);font-family:var(--font-display);font-size:1.3rem">$0.00</span></div>
+              <button id="placeOrderBtn" class="btn-primary-custom w-100 mt-4 justify-content-center" style="font-size:1rem;padding:14px"><i class="fas fa-lock me-2"></i>Place Order</button>
+              <div class="mt-2 text-center" style="font-size:0.72rem;color:var(--text-muted)"><i class="fas fa-shield-alt me-1" style="color:var(--primary)"></i>256-bit SSL Secure Checkout</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div id="footer-placeholder"></div>
+  <div class="toast-container-custom"></div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/global.js"></script>
+  <script src="assets/js/checkout.js"></script>
+  <script>
+    document.getElementById('navbar-placeholder').innerHTML = renderNavbar('');
+    document.getElementById('footer-placeholder').innerHTML = renderFooter();
+  </script>
+  <script src="assets/js/features.js"></script>
+</body>
+</html>

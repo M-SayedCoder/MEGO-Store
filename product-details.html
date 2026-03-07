@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product - MEGO Store</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/global.css">
+  <link rel="stylesheet" href="assets/css/product-details.css">
+  <link rel="stylesheet" href="assets/css/features.css">
+</head>
+<body>
+  <div id="navbar-placeholder"></div>
+  <nav aria-label="breadcrumb" class="breadcrumb-section">
+    <div class="container"><ol class="breadcrumb mb-0">
+      <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+      <li class="breadcrumb-item"><a href="products.html" id="pdBreadCatLink">Category</a></li>
+      <li class="breadcrumb-item active" id="pdBreadName">Product</li>
+      <li class="breadcrumb-item active d-none" id="pdBreadCat"></li>
+    </ol></div>
+  </nav>
+
+  <section class="product-details-section">
+    <div class="container">
+      <div class="row g-5">
+        <!-- Gallery -->
+        <div class="col-lg-5">
+          <div class="product-gallery">
+            <div class="gallery-main"><img id="pdMainImg" src="" alt=""></div>
+            <div class="gallery-thumbs" id="pdThumbs"></div>
+          </div>
+        </div>
+        <!-- Info -->
+        <div class="col-lg-7">
+          <div class="product-info-wrap">
+            <div class="product-detail-category" id="pdCategory"></div>
+            <h1 class="product-detail-name" id="pdName"></h1>
+            <div class="product-detail-rating">
+              <span class="detail-stars" id="pdStars"></span>
+              <span class="detail-rating-num" id="pdRatingNum"></span>
+              <span class="detail-reviews" id="pdReviews"></span>
+            </div>
+            <div class="product-detail-price">
+              <span class="detail-price-current" id="pdPrice"></span>
+              <span class="detail-price-old" id="pdOldPrice"></span>
+              <span class="detail-price-badge" id="pdDisc" style="display:none"></span>
+            </div>
+            <p class="product-detail-desc">Premium quality product crafted with exceptional attention to detail. Made from the finest materials for lasting comfort and style. Perfect for any occasion.</p>
+            <div id="pdColorWrap"></div>
+            <div id="pdSizeWrap"></div>
+            <div class="option-label">Quantity</div>
+            <div class="qty-controls mb-4">
+              <button class="qty-btn" id="qtyMinus"><i class="fas fa-minus"></i></button>
+              <input type="number" class="qty-input" id="qtyInput" value="1" min="1" max="99">
+              <button class="qty-btn" id="qtyPlus"><i class="fas fa-plus"></i></button>
+            </div>
+            <div class="add-to-cart-actions">
+              <button class="btn-primary-custom flex-grow-1" id="pdAddCart"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
+              <button class="btn-dark-custom" id="pdBuyNow"><i class="fas fa-bolt"></i> Buy Now</button>
+              <button class="product-action-btn" id="pdWishBtn" style="width:48px;height:48px;font-size:1rem"><i class="far fa-heart"></i></button>
+            </div>
+            <div class="product-meta">
+              <div class="meta-row"><span class="meta-label">Availability:</span><span class="meta-value in-stock"><i class="fas fa-check-circle me-1"></i>In Stock</span></div>
+              <div class="meta-row"><span class="meta-label">SKU:</span><span class="meta-value" id="pdSku">MGO-001</span></div>
+              <div class="meta-row"><span class="meta-label">Shipping:</span><span class="meta-value">Free on orders over $99</span></div>
+              <div class="meta-row"><span class="meta-label">Returns:</span><span class="meta-value">30-day hassle-free returns</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TABS -->
+  <section class="product-tabs-section">
+    <div class="container">
+      <ul class="nav nav-tabs-custom" id="pdTabs">
+        <li class="nav-item"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#tabDesc">Description</button></li>
+        <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#tabSpecs">Specifications</button></li>
+        <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#tabReviews">Reviews</button></li>
+        <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#tabShipping">Shipping</button></li>
+      </ul>
+      <div class="tab-content">
+        <div class="tab-pane fade show active" id="tabDesc">
+          <p>This premium product represents the pinnacle of quality and craftsmanship. Each piece is carefully designed and manufactured using the finest materials available, ensuring longevity and style that stands the test of time.</p>
+          <p class="mt-3">Whether you're dressing for a formal occasion or casual outings, this piece effortlessly complements any wardrobe. The attention to detail in every stitch and seam reflects our commitment to excellence.</p>
+          <ul class="mt-3" style="color:var(--text-muted);font-size:0.9rem">
+            <li>Premium quality materials</li><li>Expertly crafted design</li><li>Comfortable fit for all-day wear</li><li>Easy care and maintenance</li>
+          </ul>
+        </div>
+        <div class="tab-pane fade" id="tabSpecs">
+          <div class="row"><div class="col-md-6">
+            <table class="table" style="font-size:0.875rem">
+              <tr><td style="color:var(--text-muted);width:40%">Material</td><td style="font-weight:600">Premium Blend</td></tr>
+              <tr><td style="color:var(--text-muted)">Origin</td><td style="font-weight:600">Imported</td></tr>
+              <tr><td style="color:var(--text-muted)">Care</td><td style="font-weight:600">Machine Wash Cold</td></tr>
+              <tr><td style="color:var(--text-muted)">Fit</td><td style="font-weight:600">Regular</td></tr>
+            </table>
+          </div></div>
+        </div>
+        <div class="tab-pane fade" id="tabReviews">
+          <div class="row g-4">
+            <div class="col-md-3">
+              <div class="rating-summary">
+                <div class="rating-big">4.8</div>
+                <div class="rating-stars-big">★★★★★</div>
+                <div class="rating-total">Based on 124 reviews</div>
+              </div>
+              <div class="mt-4">
+                <div class="rating-bar"><span class="rating-bar-label">5★</span><div class="rating-bar-track"><div class="rating-bar-fill" style="width:75%"></div></div><span class="rating-bar-count">93</span></div>
+                <div class="rating-bar"><span class="rating-bar-label">4★</span><div class="rating-bar-track"><div class="rating-bar-fill" style="width:15%"></div></div><span class="rating-bar-count">19</span></div>
+                <div class="rating-bar"><span class="rating-bar-label">3★</span><div class="rating-bar-track"><div class="rating-bar-fill" style="width:7%"></div></div><span class="rating-bar-count">9</span></div>
+                <div class="rating-bar"><span class="rating-bar-label">2★</span><div class="rating-bar-track"><div class="rating-bar-fill" style="width:2%"></div></div><span class="rating-bar-count">2</span></div>
+                <div class="rating-bar"><span class="rating-bar-label">1★</span><div class="rating-bar-track"><div class="rating-bar-fill" style="width:1%"></div></div><span class="rating-bar-count">1</span></div>
+              </div>
+              <button class="btn-primary-custom w-100 mt-3" data-bs-toggle="modal" data-bs-target="#reviewModal"><i class="fas fa-pen"></i> Write a Review</button>
+            </div>
+            <div class="col-md-9" id="reviewsList">
+              <div class="review-card"><div class="review-header"><div><div class="reviewer-name">Ahmed M.</div><div class="review-stars">★★★★★</div></div><div class="review-date">2 weeks ago</div></div><p class="review-text">Excellent product! Exceeded my expectations in terms of quality and fit. Will definitely buy again.</p><div class="review-helpful">Helpful? <button>👍 12</button></div></div>
+              <div class="review-card"><div class="review-header"><div><div class="reviewer-name">Sarah K.</div><div class="review-stars">★★★★☆</div></div><div class="review-date">1 month ago</div></div><p class="review-text">Great quality, shipping was fast. The color is exactly as shown in the photos.</p><div class="review-helpful">Helpful? <button>👍 8</button></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="tabShipping">
+          <div class="row g-3">
+            <div class="col-md-4"><div style="background:var(--light-2);border-radius:var(--radius-md);padding:20px"><div style="font-size:1.5rem;margin-bottom:8px">🚚</div><div style="font-weight:700;margin-bottom:6px">Standard Shipping</div><div style="color:var(--text-muted);font-size:0.875rem">5-7 business days<br>Free on orders $99+</div></div></div>
+            <div class="col-md-4"><div style="background:var(--light-2);border-radius:var(--radius-md);padding:20px"><div style="font-size:1.5rem;margin-bottom:8px">⚡</div><div style="font-weight:700;margin-bottom:6px">Express Shipping</div><div style="color:var(--text-muted);font-size:0.875rem">2-3 business days<br>$9.99 flat rate</div></div></div>
+            <div class="col-md-4"><div style="background:var(--light-2);border-radius:var(--radius-md);padding:20px"><div style="font-size:1.5rem;margin-bottom:8px">🔄</div><div style="font-weight:700;margin-bottom:6px">Easy Returns</div><div style="color:var(--text-muted);font-size:0.875rem">30-day return window<br>Free return shipping</div></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RELATED -->
+  <section class="related-section">
+    <div class="container">
+      <div class="section-header text-center"><div class="section-tag">You May Also Like</div><h2 class="section-title">Related <span>Products</span></h2><div class="section-divider mx-auto"></div></div>
+      <div class="row g-3" id="relatedGrid"></div>
+    </div>
+  </section>
+
+  <!-- REVIEW MODAL -->
+  <div class="modal fade" id="reviewModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content p-4">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <h5 style="font-family:var(--font-display)">Write a Review</h5>
+          <button class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <form onsubmit="submitReview(event)">
+          <div class="form-group-custom"><label class="form-label-custom">Your Name</label><input class="form-control-custom" id="reviewName" placeholder="John Doe" required></div>
+          <div class="form-group-custom"><label class="form-label-custom">Rating</label><div class="d-flex gap-2">${[5,4,3,2,1].map(n=>`<label style="cursor:pointer"><input type="radio" name="reviewRating" value="${n}" style="display:none"> <span style="font-size:1.5rem;color:var(--primary)">${n}★</span></label>`).join('')}</div></div>
+          <div class="form-group-custom"><label class="form-label-custom">Your Review</label><textarea class="form-control-custom" id="reviewText" rows="4" placeholder="Share your experience..." required></textarea></div>
+          <button type="submit" class="btn-primary-custom w-100"><i class="fas fa-paper-plane"></i> Submit Review</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- STICKY CART BAR -->
+  <div class="sticky-cart-bar" id="stickyCartBar">
+    <div class="sticky-product-info">
+      <img src="" alt="" class="sticky-product-img" id="stickyImg">
+      <div>
+        <div class="sticky-product-name" id="stickyName">Product Name</div>
+        <div class="sticky-product-price" id="stickyPrice">/bin/sh.00</div>
+      </div>
+    </div>
+    <button class="btn-primary-custom" onclick="quickAdd(parseInt(new URLSearchParams(window.location.search).get('id')))">
+      <i class="fas fa-shopping-bag"></i> Add to Cart
+    </button>
+  </div>
+
+  <!-- PRICE DROP ALERT -->
+<div id="footer-placeholder"></div>
+  <div class="toast-container-custom"></div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/global.js"></script>
+  <script src="assets/js/product-details.js"></script>
+  <script>
+    document.getElementById('navbar-placeholder').innerHTML = renderNavbar('Products');
+    // Track recently viewed
+    setTimeout(() => {
+      const id = parseInt(new URLSearchParams(window.location.search).get('id')) || 1;
+      const p = PRODUCTS_DATA.find(x => x.id === id);
+      if (p) RecentlyViewed.add(p);
+    }, 1000);
+    document.getElementById('footer-placeholder').innerHTML = renderFooter();
+    // Sticky cart
+    setTimeout(() => {
+      const p = PRODUCTS_DATA.find(x => x.id === (parseInt(new URLSearchParams(window.location.search).get('id')) || 1));
+      if (p) {
+        document.getElementById('stickyImg').src = p.image;
+        document.getElementById('stickyName').textContent = p.name;
+        document.getElementById('stickyPrice').textContent = '$' + p.price.toFixed(2);
+        window.addEventListener('scroll', () => {
+          const bar = document.getElementById('stickyCartBar');
+          if (bar) bar.classList.toggle('visible', window.scrollY > 500);
+        });
+      }
+    }, 500);
+  </script>
+  <script src="assets/js/features.js"></script>
+</body>
+</html>

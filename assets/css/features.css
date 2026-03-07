@@ -1,0 +1,72 @@
+/* ===== LOADING SCREEN ===== */
+#loadingScreen { font-family: var(--font-display); }
+
+/* ===== STICKY CART BAR ===== */
+.sticky-cart-bar {
+  position: fixed; bottom: 0; left: 0; right: 0;
+  background: var(--secondary); color: white;
+  padding: 14px 24px; z-index: 990;
+  display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 14px;
+  transform: translateY(100%); transition: transform 0.3s ease;
+  box-shadow: 0 -4px 20px rgba(0,0,0,0.2);
+}
+.sticky-cart-bar.visible { transform: translateY(0); }
+.sticky-product-info { display: flex; align-items: center; gap: 14px; }
+.sticky-product-img { width: 44px; height: 44px; border-radius: 10px; object-fit: cover; }
+.sticky-product-name { font-family: var(--font-display); font-weight: 700; font-size: 0.9rem; }
+.sticky-product-price { color: var(--primary); font-family: var(--font-display); font-weight: 700; font-size: 1.1rem; }
+
+/* ===== PRICE DROP ALERT ===== */
+.price-alert-wrap { background: var(--light-2); border-radius: var(--radius-md); padding: 16px; margin-top: 16px; }
+.price-alert-input { display: flex; gap: 8px; margin-top: 10px; }
+.price-alert-input input { flex: 1; border: 1.5px solid var(--border); border-radius: var(--radius-sm); padding: 9px 12px; font-family: var(--font-body); font-size: 0.85rem; background: white; outline: none; color: var(--text-dark); }
+[data-theme="dark"] .price-alert-input input { background: var(--dark-2); color: var(--text-light); }
+
+/* ===== LOYALTY BADGE ===== */
+.loyalty-widget {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: linear-gradient(135deg, var(--secondary), var(--dark));
+  color: white; padding: 8px 16px; border-radius: 50px;
+  font-size: 0.78rem; font-weight: 600;
+}
+.loyalty-widget .pts { color: var(--primary); font-family: var(--font-display); font-size: 0.95rem; font-weight: 700; }
+
+/* ===== COMPARE BTN ===== */
+.compare-btn:hover { background: var(--secondary) !important; color: white !important; }
+
+/* ===== RECENTLY VIEWED ===== */
+.recently-viewed-section { padding: 60px 0; background: var(--light-2); }
+[data-theme="dark"] .recently-viewed-section { background: var(--dark-2); }
+
+/* ===== CHAT WIDGET ===== */
+#chatInput:focus { border-color: var(--primary) !important; }
+#chatMessages::-webkit-scrollbar { width: 4px; }
+#chatMessages::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+
+/* ===== DARK OVERLAY FOR MODALS ===== */
+#exitIntentModal, #compareModal { backdrop-filter: blur(4px); }
+
+/* ===== STOCK BADGE ===== */
+.stock-counter {
+  display: none;
+  position: absolute; bottom: 60px; left: 12px; right: 12px;
+  background: rgba(230,57,70,0.9); color: white;
+  text-align: center; padding: 5px;
+  font-size: 0.72rem; font-weight: 700; letter-spacing: 0.5px;
+  border-radius: 6px;
+}
+
+/* ===== PULSE ANIMATION ===== */
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.3); opacity: 0.7; }
+}
+
+/* ===== ADMIN LINK IN FOOTER ===== */
+.admin-link-footer {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: rgba(200,169,110,0.1); border: 1px solid var(--gold-border, rgba(200,169,110,0.25));
+  color: var(--primary); padding: 6px 14px; border-radius: 8px;
+  font-size: 0.78rem; font-weight: 600; transition: var(--transition-fast);
+}
+.admin-link-footer:hover { background: var(--primary); color: white; }

@@ -1,0 +1,26 @@
+.checkout-section { padding: 50px 0; }
+.checkout-card { background: white; border-radius: var(--radius-lg); padding: 28px; border: 1px solid var(--border); margin-bottom: 24px; }
+[data-theme="dark"] .checkout-card { background: var(--dark-2); }
+.checkout-card-title { font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; color: var(--text-dark); margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
+[data-theme="dark"] .checkout-card-title { color: var(--text-light); }
+.checkout-card-title .step-num { width: 28px; height: 28px; background: linear-gradient(135deg, var(--primary), var(--primary-dark)); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 0.8rem; font-weight: 700; }
+.payment-method { border: 1.5px solid var(--border); border-radius: var(--radius-md); padding: 14px 16px; cursor: pointer; transition: var(--transition-fast); display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
+.payment-method:hover, .payment-method.active { border-color: var(--primary); background: rgba(200,169,110,0.06); }
+.payment-method input[type="radio"] { accent-color: var(--primary); }
+.payment-method-label { font-weight: 600; font-size: 0.9rem; color: var(--text-dark); }
+[data-theme="dark"] .payment-method-label { color: var(--text-light); }
+.payment-method-icon { margin-left: auto; color: var(--text-muted); font-size: 1.2rem; }
+.order-item { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; padding-bottom: 14px; border-bottom: 1px solid var(--border); }
+.order-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.order-item-img { width: 54px; height: 54px; border-radius: var(--radius-sm); object-fit: cover; }
+.order-item-name { font-size: 0.875rem; font-weight: 600; color: var(--text-dark); }
+[data-theme="dark"] .order-item-name { color: var(--text-light); }
+.order-item-qty { font-size: 0.75rem; color: var(--text-muted); }
+.order-item-price { margin-left: auto; font-weight: 700; color: var(--primary); font-family: var(--font-display); }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+@media (max-width: 576px) { .form-row { grid-template-columns: 1fr; } }
+
+/* ========== MOBILE RESPONSIVE FIX - CHECKOUT ========== */
+@media (max-width: 576px) {
+  .form-row { grid-template-columns: 1fr !important; }
+}

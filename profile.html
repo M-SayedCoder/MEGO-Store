@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Profile - MEGO Store</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/global.css">
+  <link rel="stylesheet" href="assets/css/profile.css">
+  <link rel="stylesheet" href="assets/css/features.css">
+</head>
+<body>
+  <div id="navbar-placeholder"></div>
+  <section class="profile-section">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Sidebar -->
+        <div class="col-lg-3">
+          <div class="profile-sidebar">
+            <div class="profile-avatar-wrap">
+              <img src="https://i.pravatar.cc/100?img=3" alt="Profile" class="profile-avatar">
+              <div class="avatar-edit"><i class="fas fa-camera"></i></div>
+            </div>
+            <div class="profile-name">John Doe</div>
+            <div class="profile-email">john@example.com</div>
+            <div class="loyalty-widget mt-3">
+              <i class="fas fa-coins" style="color:var(--primary)"></i>
+              <span>Points: </span><span class="pts loyalty-points-display">0 pts</span>
+            </div>
+
+            <ul class="profile-nav">
+              <li><button class="profile-nav-link" data-tab="overview"><i class="fas fa-th-large"></i>Overview</button></li>
+              <li><button class="profile-nav-link" data-tab="orders"><i class="fas fa-shopping-bag"></i>My Orders</button></li>
+              <li><button class="profile-nav-link" data-tab="wishlist"><i class="fas fa-heart"></i>Wishlist</button></li>
+              <li><button class="profile-nav-link" data-tab="settings"><i class="fas fa-user-edit"></i>Edit Profile</button></li>
+              <li><button class="profile-nav-link" data-tab="password"><i class="fas fa-lock"></i>Change Password</button></li>
+              <li><button class="profile-nav-link" data-tab="address"><i class="fas fa-map-marker-alt"></i>Addresses</button></li>
+              <li><hr style="border-color:var(--border);margin:8px 0"></li>
+              <li><a href="index.html" class="profile-nav-link" style="color:var(--accent)"><i class="fas fa-sign-out-alt" style="color:var(--accent)"></i>Sign Out</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Main -->
+        <div class="col-lg-9">
+
+          <!-- OVERVIEW -->
+          <div class="profile-tab" id="tab-overview">
+            <div class="row g-3 mb-4">
+              <div class="col-6 col-md-3"><div class="stat-card"><div class="stat-icon">📦</div><div class="stat-num">12</div><div class="stat-label">Total Orders</div></div></div>
+              <div class="col-6 col-md-3"><div class="stat-card"><div class="stat-icon">❤️</div><div class="stat-num">8</div><div class="stat-label">Wishlist Items</div></div></div>
+              <div class="col-6 col-md-3"><div class="stat-card"><div class="stat-icon">⭐</div><div class="stat-num">5</div><div class="stat-label">Reviews Given</div></div></div>
+              <div class="col-6 col-md-3"><div class="stat-card"><div class="stat-icon">💰</div><div class="stat-num">$940</div><div class="stat-label">Total Spent</div></div></div>
+            </div>
+            <div class="profile-card">
+              <div class="profile-card-title"><i class="fas fa-clock me-2" style="color:var(--primary)"></i>Recent Orders</div>
+              <div class="order-table-head"><div>Order ID</div><div>Date</div><div>Items</div><div>Total</div><div>Status</div></div>
+              <div class="order-row"><div class="order-id">#MGO-1042</div><div style="color:var(--text-muted)">Jan 15, 2025</div><div>3 items</div><div style="font-weight:700">$189.97</div><div><span class="order-status status-delivered">Delivered</span></div></div>
+              <div class="order-row"><div class="order-id">#MGO-1035</div><div style="color:var(--text-muted)">Jan 8, 2025</div><div>1 item</div><div style="font-weight:700">$129.99</div><div><span class="order-status status-processing">Processing</span></div></div>
+              <div class="order-row"><div class="order-id">#MGO-1021</div><div style="color:var(--text-muted)">Dec 28, 2024</div><div>2 items</div><div style="font-weight:700">$249.98</div><div><span class="order-status status-delivered">Delivered</span></div></div>
+            </div>
+          </div>
+
+          <!-- ORDERS -->
+          <div class="profile-tab" id="tab-orders" style="display:none">
+            <div class="profile-card">
+              <div class="profile-card-title"><i class="fas fa-shopping-bag me-2" style="color:var(--primary)"></i>All Orders</div>
+              <div class="order-table-head"><div>Order ID</div><div>Date</div><div>Items</div><div>Total</div><div>Status</div></div>
+              <div class="order-row"><div class="order-id">#MGO-1042</div><div style="color:var(--text-muted)">Jan 15, 2025</div><div>3 items</div><div style="font-weight:700">$189.97</div><div><span class="order-status status-delivered">Delivered</span></div></div>
+              <div class="order-row"><div class="order-id">#MGO-1035</div><div style="color:var(--text-muted)">Jan 8, 2025</div><div>1 item</div><div style="font-weight:700">$129.99</div><div><span class="order-status status-processing">Processing</span></div></div>
+              <div class="order-row"><div class="order-id">#MGO-1021</div><div style="color:var(--text-muted)">Dec 28, 2024</div><div>2 items</div><div style="font-weight:700">$249.98</div><div><span class="order-status status-delivered">Delivered</span></div></div>
+              <div class="order-row"><div class="order-id">#MGO-1010</div><div style="color:var(--text-muted)">Dec 10, 2024</div><div>4 items</div><div style="font-weight:700">$371.96</div><div><span class="order-status status-delivered">Delivered</span></div></div>
+              <div class="order-row"><div class="order-id">#MGO-0998</div><div style="color:var(--text-muted)">Nov 25, 2024</div><div>1 item</div><div style="font-weight:700">$89.99</div><div><span class="order-status status-pending">Pending</span></div></div>
+            </div>
+          </div>
+
+          <!-- WISHLIST -->
+          <div class="profile-tab" id="tab-wishlist" style="display:none">
+            <div class="profile-card">
+              <div class="profile-card-title"><i class="fas fa-heart me-2" style="color:var(--primary)"></i>My Wishlist</div>
+              <div class="row g-3" id="profileWishlist">
+                <div class="col-12 text-center py-4" style="color:var(--text-muted)">
+                  <i class="fas fa-heart" style="font-size:3rem;opacity:0.2;margin-bottom:12px;display:block"></i>
+                  <p>No items in wishlist yet. <a href="products.html" style="color:var(--primary)">Browse products</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- EDIT PROFILE -->
+          <div class="profile-tab" id="tab-settings" style="display:none">
+            <div class="profile-card">
+              <div class="profile-card-title"><i class="fas fa-user-edit me-2" style="color:var(--primary)"></i>Edit Profile</div>
+              <form onsubmit="ProfilePage.saveProfile(event)">
+                <div class="row g-3">
+                  <div class="col-md-6"><div class="form-group-custom"><label class="form-label-custom">First Name</label><input class="form-control-custom" value="John"></div></div>
+                  <div class="col-md-6"><div class="form-group-custom"><label class="form-label-custom">Last Name</label><input class="form-control-custom" value="Doe"></div></div>
+                  <div class="col-md-6"><div class="form-group-custom"><label class="form-label-custom">Email</label><input type="email" class="form-control-custom" value="john@example.com"></div></div>
+                  <div class="col-md-6"><div class="form-group-custom"><label class="form-label-custom">Phone</label><input class="form-control-custom" value="+1 234 567 8900"></div></div>
+                  <div class="col-md-6"><div class="form-group-custom"><label class="form-label-custom">Date of Birth</label><input type="date" class="form-control-custom" value="1990-01-15"></div></div>
+                  <div class="col-md-6"><div class="form-group-custom"><label class="form-label-custom">Gender</label><select class="form-control-custom"><option>Male</option><option>Female</option><option>Prefer not to say</option></select></div></div>
+                  <div class="col-12"><button type="submit" class="btn-primary-custom"><i class="fas fa-save"></i> Save Changes</button></div>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <!-- PASSWORD -->
+          <div class="profile-tab" id="tab-password" style="display:none">
+            <div class="profile-card">
+              <div class="profile-card-title"><i class="fas fa-lock me-2" style="color:var(--primary)"></i>Change Password</div>
+              <form onsubmit="ProfilePage.changePassword(event)" style="max-width:420px">
+                <div class="form-group-custom"><label class="form-label-custom">Current Password</label><input type="password" class="form-control-custom" placeholder="••••••••"></div>
+                <div class="form-group-custom"><label class="form-label-custom">New Password</label><input type="password" class="form-control-custom" id="newPass" placeholder="Min. 8 characters"></div>
+                <div class="form-group-custom"><label class="form-label-custom">Confirm New Password</label><input type="password" class="form-control-custom" id="confirmNewPass" placeholder="Repeat new password"></div>
+                <button type="submit" class="btn-primary-custom"><i class="fas fa-key"></i> Update Password</button>
+              </form>
+            </div>
+          </div>
+
+          <!-- ADDRESS -->
+          <div class="profile-tab" id="tab-address" style="display:none">
+            <div class="profile-card">
+              <div class="profile-card-title d-flex justify-content-between align-items-center">
+                <span><i class="fas fa-map-marker-alt me-2" style="color:var(--primary)"></i>Saved Addresses</span>
+                <button class="btn-primary-custom py-2 px-3" style="font-size:0.8rem"><i class="fas fa-plus"></i> Add New</button>
+              </div>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <div class="address-card default">
+                    <div class="address-default-badge">DEFAULT</div>
+                    <div style="font-weight:700;margin-bottom:6px;color:var(--text-dark)">John Doe</div>
+                    <div style="font-size:0.875rem;color:var(--text-muted);line-height:1.7">123 Main Street, Apt 4B<br>New York, NY 10001<br>United States<br>+1 234 567 8900</div>
+                    <div class="d-flex gap-2 mt-3">
+                      <button class="btn-outline-custom py-1 px-3" style="font-size:0.78rem"><i class="fas fa-edit"></i> Edit</button>
+                      <button style="background:none;border:none;color:var(--accent);font-size:0.78rem;cursor:pointer"><i class="fas fa-trash"></i> Delete</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="address-card">
+                    <div style="font-weight:700;margin-bottom:6px;color:var(--text-dark)">Office</div>
+                    <div style="font-size:0.875rem;color:var(--text-muted);line-height:1.7">456 Business Ave, Suite 200<br>Los Angeles, CA 90001<br>United States<br>+1 987 654 3210</div>
+                    <div class="d-flex gap-2 mt-3">
+                      <button class="btn-outline-custom py-1 px-3" style="font-size:0.78rem"><i class="fas fa-edit"></i> Edit</button>
+                      <button style="background:none;border:none;color:var(--accent);font-size:0.78rem;cursor:pointer"><i class="fas fa-trash"></i> Delete</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <div id="footer-placeholder"></div>
+  <div class="toast-container-custom"></div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/global.js"></script>
+  <script src="assets/js/profile.js"></script>
+  <script>
+    document.getElementById('navbar-placeholder').innerHTML = renderNavbar('');
+    document.getElementById('footer-placeholder').innerHTML = renderFooter();
+  </script>
+  <script src="assets/js/features.js"></script>
+</body>
+</html>
